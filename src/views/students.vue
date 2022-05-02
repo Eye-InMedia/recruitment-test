@@ -18,8 +18,8 @@ onMounted(() => {
   fetch(`http://localhost:8000/students`)
       .then(resp => resp.json())
       .then(data => {
-        students = data.students
-        average = data.average
+        students.value = data.students
+        average.value = data.average
       });
 })
 </script>
